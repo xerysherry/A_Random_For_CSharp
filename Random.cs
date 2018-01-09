@@ -44,11 +44,11 @@ public class Random
 
     public int Next()
     {
-        return (int)GetUint();
+        return (int)(GetUint() & 0x7fffffff);
     }
     public int Next(int max)
     {
-        return ((int)GetUint()) % max;
+        return (int)(GetUint() % max);
     }
     public int Next(int min, int max)
     {
